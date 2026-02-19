@@ -1,0 +1,389 @@
+{
+  "placeholderImages": [
+    {
+      "id": "stream-1",
+      "description": "A streamer playing a video game.",
+      "imageUrl": "https://images.unsplash.com/photo-1610041321420-a596dd14ebc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnYW1pbmclMjBzdHJlYW18ZW58MHx8fHwxNzY3OTAyOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming stream"
+    },
+    {
+      "id": "stream-2",
+      "description": "A person singing into a microphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1474692295473-66ba4d54e0d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtdXNpYyUyMHBlcmZvcm1hbmNlfGVufDB8fHx8MTc2NzkwMjk3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "music performance"
+    },
+    {
+      "id": "stream-3",
+      "description": "An artist drawing on a tablet.",
+      "imageUrl": "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaWdpdGFsJTIwYXJ0fGVufDB8fHx8MTc2NzgyNjQzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital art"
+    },
+    {
+      "id": "stream-4",
+      "description": "A person cooking in a kitchen.",
+      "imageUrl": "https://images.unsplash.com/photo-1758522488051-8ca91c4e0d81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb29raW5nJTIwc2hvd3xlbnwwfHx8fDE3Njc4OTM0MjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cooking show"
+    },
+    {
+      "id": "stream-5",
+      "description": "A person doing a live podcast.",
+      "imageUrl": "https://images.unsplash.com/photo-1688661492135-6975848b6eca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwb2RjYXN0JTIwdGFsa3xlbnwwfHx8fDE3Njc5MDI5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "podcast talk"
+    },
+    {
+      "id": "stream-6",
+      "description": "A group of people in a party chat.",
+      "imageUrl": "https://images.unsplash.com/photo-1551845843-8520a9208f20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncm91cCUyMGNoYXR8ZW58MHx8fHwxNzY3OTAyOTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "group chat"
+    },
+    {
+      "id": "stream-7",
+      "description": "A DJ performing a set.",
+      "imageUrl": "https://images.unsplash.com/photo-1583906326458-5eb89bf0f911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaiUyMHNldHxlbnwwfHx8fDE3Njc5MDI5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dj set"
+    },
+    {
+      "id": "stream-8",
+      "description": "A person unboxing a product.",
+      "imageUrl": "https://images.unsplash.com/photo-1687166341835-b022ccacea19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1bmJveGluZyUyMHByb2R1Y3R8ZW58MHx8fHwxNzY3OTAyOTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "unboxing product"
+    },
+    {
+      "id": "stream-singing",
+      "description": "Woman with curly hair singing.",
+      "imageUrl": "https://images.unsplash.com/photo-1512484776495-a09d92e87c3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc2ODAxNTQyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman singing"
+    },
+    {
+      "id": "stream-chatting-1",
+      "description": "Woman with braids.",
+      "imageUrl": "https://images.unsplash.com/photo-1504593811423-6dd665756598?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc2ODAxNTQyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "stream-chatting-2",
+      "description": "Woman with a red dot on her forehead.",
+      "imageUrl": "https://images.unsplash.com/photo-1599948068715-b778b87f8f48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGluZGlhbiUyMHdvbWFufGVufDB8fHx8MTc2ODAxNTQyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian woman"
+    },
+    {
+      "id": "stream-top10",
+      "description": "Man with a white beard wearing a santa hat.",
+      "imageUrl": "https://images.unsplash.com/photo-1542384444-c08b792a7f5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdCUyMHNhbnRhfGVufDB8fHx8MTc2ODAxNTQyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "santa claus"
+    },
+    {
+      "id": "stream-sparkle",
+      "description": "Woman with sparkles on her face.",
+      "imageUrl": "https://images.unsplash.com/photo-1617454823434-a621748270a4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman sparkles"
+    },
+    {
+      "id": "stream-live-overlay",
+      "description": "Woman in a car, with a live button overlay.",
+      "imageUrl": "https://images.unsplash.com/photo-1550995199-a93e3b7b4a2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman live"
+    },
+    {
+      "id": "pk-event",
+      "description": "A banner for a 1v1 PK event.",
+      "imageUrl": "https://images.unsplash.com/photo-1654398957574-fcff716ab2c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYW1pbmclMjBldmVudHxlbnwwfHx8fDE3Njg0Nzc0NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming event"
+    },
+    {
+      "id": "hrh-profile",
+      "imageUrl": "https://firebasestudio-hosting-public.storage.googleapis.com/users%2FjOz8fS2SyrQdsW6d5zsdL1yH3D23%2FkD5xVz_yY-photo-main.png",
+      "imageHint": "royal man"
+    },
+    {
+      "id": "hrh-car-1",
+      "imageUrl": "https://firebasestudio-hosting-public.storage.googleapis.com/users%2FjOz8fS2SyrQdsW6d5zsdL1yH3D23%2FV8Hw7k0B0K-photo-car-1.png",
+      "imageHint": "man car"
+    },
+    {
+      "id": "hrh-car-2",
+      "imageUrl": "https://firebasestudio-hosting-public.storage.googleapis.com/users%2FjOz8fS2SyrQdsW6d5zsdL1yH3D23%2FXDqK1YjD18-photo-car-2.png",
+      "imageHint": "man white car"
+    },
+    {
+      "id": "hrh-crown-1",
+      "imageUrl": "https://firebasestudio-hosting-public.storage.googleapis.com/users%2FjOz8fS2SyrQdsW6d5zsdL1yH3D23%2Fk1zU6D090d-photo-crown-1.png",
+      "imageHint": "crown cushion"
+    },
+    {
+      "id": "hrh-crown-2",
+      "imageUrl": "https://firebasestudio-hosting-public.storage.googleapis.com/users%2FjOz8fS2SyrQdsW6d5zsdL1yH3D23%2FfBw1fF-gG_-photo-crown-2.png",
+      "imageHint": "crown red cushion"
+    },
+    {
+      "id": "avatar-1",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjgxMjY3MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-2",
+      "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2ODEyMTYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-3",
+      "imageUrl": "https://images.unsplash.com/photo-1484863137850-59afcfe05386?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2ODAzMDg0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "avatar-4",
+      "imageUrl": "https://images.unsplash.com/photo-1620743364130-8a1669f00b64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHN1bmdsYXNzZXN8ZW58MHx8fHwxNzY4MTIxNjE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman sunglasses"
+    },
+    {
+      "id": "avatar-5",
+      "imageUrl": "https://images.unsplash.com/photo-1717436012258-4b3da9b3afb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjB3ZWFyaW5nJTIwaGF0fGVufDB8fHx8MTc2ODEzMjA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man wearing hat"
+    },
+    {
+      "id": "avatar-6",
+      "imageUrl": "https://images.unsplash.com/photo-1535295972055-1c762f4483e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxhdWdoaW5nfGVufDB8fHx8MTc2ODAzMjQ3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman laughing"
+    },
+    {
+      "id": "avatar-7",
+      "imageUrl": "https://images.unsplash.com/photo-1635650804494-41f0ecefec22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwY2l0eXxlbnwwfHx8fDE3NjgxMzA3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man city"
+    },
+    {
+      "id": "avatar-8",
+      "imageUrl": "https://images.unsplash.com/photo-1455642305367-68834a1da7ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMG5hdHVyZXxlbnwwfHx8fDE3NjgxMzA3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman nature"
+    },
+    {
+      "id": "avatar-9",
+      "imageUrl": "https://images.unsplash.com/photo-1635822161882-b82ffacd8278?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwY29sb3JmdWx8ZW58MHx8fHwxNzY4MTMyMDYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person colorful"
+    },
+    {
+      "id": "avatar-10",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1575388105878-0ff8d276d368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMGJlYWNofGVufDB8fHx8MTc2ODEwMzAyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman beach"
+    },
+    {
+      "id": "avatar-11",
+      "imageUrl": "https://images.unsplash.com/photo-1634551053528-d50092733600?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBzZXJpb3VzfGVufDB8fHx8MTc2ODA0MjgwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man serious"
+    },
+    {
+      "id": "avatar-12",
+      "imageUrl": "https://images.unsplash.com/photo-1681641092941-b1acee507ee0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHZpbnRhZ2V8ZW58MHx8fHwxNzY4MTMyMDYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman vintage"
+    },
+    {
+      "id": "avatar-13",
+      "imageUrl": "https://images.unsplash.com/photo-1613908892468-14f4f93f5cda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBjb2ZmZWV8ZW58MHx8fHwxNzY4MDY4MTczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man coffee"
+    },
+    {
+      "id": "avatar-14",
+      "imageUrl": "https://images.unsplash.com/photo-1574015974293-817f0ebebb74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMGZhc2hpb258ZW58MHx8fHwxNzY4MDMwOTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman fashion"
+    },
+    {
+      "id": "avatar-15",
+      "imageUrl": "https://images.unsplash.com/photo-1629904888099-00285934292b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2ODEzMjA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person technology"
+    },
+    {
+      "id": "avatar-16",
+      "imageUrl": "https://images.unsplash.com/photo-1748015879337-ef95556c3749?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHN0dWRpb3xlbnwwfHx8fDE3Njg5Mjc0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman studio"
+    },
+    {
+      "id": "avatar-17",
+      "imageUrl": "https://images.unsplash.com/photo-1527718755910-54cac9d44cc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwb3V0ZG9vcnxlbnwwfHx8fDE3NjgxMjM5NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man outdoor"
+    },
+    {
+      "id": "avatar-18",
+      "imageUrl": "https://images.unsplash.com/photo-1513673054901-2b5f51551112?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGdsYXNzZXN8ZW58MHx8fHwxNzY4MDc1ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman glasses"
+    },
+    {
+      "id": "avatar-19",
+      "imageUrl": "https://images.unsplash.com/photo-1623184663110-89ba5b565eb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2ODEyMjMwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "avatar-20",
+      "imageUrl": "https://images.unsplash.com/photo-1643569556871-91ec60671ed7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwZGVzaWdufGVufDB8fHx8MTc2ODAyNzAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist design"
+    },
+    {
+      "id": "party-thumb-1",
+      "imageUrl": "https://images.unsplash.com/photo-1541661538396-53ba2d051eed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMGNvbG9yc3xlbnwwfHx8fDE3NjgxMTgxMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract colors"
+    },
+    {
+      "id": "party-thumb-2",
+      "imageUrl": "https://images.unsplash.com/photo-1757847112225-a2fb2e67ce47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXR5JTIwbmlnaHRsaWZlfGVufDB8fHx8MTc2ODExODE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city nightlife"
+    },
+    {
+      "id": "party-thumb-3",
+      "imageUrl": "https://images.unsplash.com/photo-1550275994-2bc88dc68637?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZW9uJTIwbGlnaHRzfGVufDB8fHx8MTc2ODA3Mjc3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neon lights"
+    },
+    {
+      "id": "party-thumb-4",
+      "imageUrl": "https://images.unsplash.com/photo-1689783101582-98feb9393a57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb25jZXJ0JTIwY3Jvd2R8ZW58MHx8fHwxNzY4MTA1Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "concert crowd"
+    },
+    {
+      "id": "party-thumb-5",
+      "imageUrl": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb3p5JTIwY2FmZXxlbnwwfHx8fDE3NjgxMjkzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy cafe"
+    },
+    {
+      "id": "party-thumb-6",
+      "imageUrl": "https://images.unsplash.com/photo-1561571994-3c61c554181a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjgxMjM2Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beach sunset"
+    },
+    {
+      "id": "party-thumb-7",
+      "imageUrl": "https://images.unsplash.com/photo-1598454981031-9c59c2d1a5c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9yZXN0JTIwcGF0aHxlbnwwfHx8fDE3NjgxMDA1Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest path"
+    },
+    {
+      "id": "party-thumb-8",
+      "imageUrl": "https://images.unsplash.com/photo-1610552050890-fe99536c2615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjgxMjkzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain landscape"
+    },
+    {
+      "id": "party-thumb-9",
+      "imageUrl": "https://images.unsplash.com/photo-1613441069548-db3eb237bfb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyZXRybyUyMGFyY2FkZXxlbnwwfHx8fDE3NjgxMzIwNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retro arcade"
+    },
+    {
+      "id": "party-thumb-10",
+      "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5fGVufDB8fHx8MTc2ODA1MTEzOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "art gallery"
+    },
+    {
+      "id": "party-thumb-11",
+      "imageUrl": "https://images.unsplash.com/photo-1735805546429-906f7421fb0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxib29rc2hlbGYlMjBsaWJyYXJ5fGVufDB8fHx8MTc2ODEzMjA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bookshelf library"
+    },
+    {
+      "id": "party-thumb-12",
+      "imageUrl": "https://images.unsplash.com/photo-1625872497997-b5b7c86c2c23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmaXJld29ya3MlMjBuaWdodHxlbnwwfHx8fDE3NjgxMzIwNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fireworks night"
+    },
+    {
+      "id": "party-thumb-13",
+      "imageUrl": "https://images.unsplash.com/photo-1465101162946-4377e57745c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnYWxheHklMjBzdGFyc3xlbnwwfHx8fDE3NjgxMjE0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "galaxy stars"
+    },
+    {
+      "id": "party-thumb-14",
+      "imageUrl": "https://images.unsplash.com/photo-1546349851-64285be8e9fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY4MDA5NDU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "party-thumb-15",
+      "imageUrl": "https://images.unsplash.com/photo-1587750059638-e7e8c43b99fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx2aW50YWdlJTIwY2FyfGVufDB8fHx8MTc2ODEyNjk3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vintage car"
+    },
+    {
+      "id": "party-thumb-16",
+      "imageUrl": "https://images.unsplash.com/photo-1761145586984-0d2a8c471d15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1bmRlcndhdGVyJTIwc2NlbmV8ZW58MHx8fHwxNzY4MTMyMDYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "underwater scene"
+    },
+    {
+      "id": "party-thumb-17",
+      "imageUrl": "https://images.unsplash.com/photo-1556103727-777acb371272?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGlzbGFuZHxlbnwwfHx8fDE3NjgxMzIwNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tropical island"
+    },
+    {
+      "id": "party-thumb-18",
+      "imageUrl": "https://images.unsplash.com/photo-1583407723467-9b2d22504831?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHJlZXQlMjBhcnR8ZW58MHx8fHwxNzY4MTI4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "street art"
+    },
+    {
+      "id": "party-thumb-19",
+      "imageUrl": "https://images.unsplash.com/photo-1570556319136-3cfc640168a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NjgxMjMwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "space nebula"
+    },
+    {
+      "id": "party-thumb-20",
+      "imageUrl": "https://images.unsplash.com/photo-1643569556871-91ec60671ed7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwZGVzaWdufGVufDB8fHx8MTc2ODAyNzAwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist design"
+    },
+    {
+      "id": "gift-bonus",
+      "description": "A gift box for bonuses.",
+      "imageUrl": "https://images.unsplash.com/photo-1589948516895-db76617cb753?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnaWZ0JTIwYm94fGVufDB8fHx8MTc2Nzg0NzkzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gift box"
+    },
+    {
+      "id": "profile-gift-box",
+      "description": "A blue gift box with a pink ribbon.",
+      "imageUrl": "https://images.unsplash.com/photo-1513201887831-41584c3482d3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "blue gift box"
+    },
+    {
+      "id": "badge-pk-winner",
+      "description": "Badge for winning PK battles.",
+      "imageUrl": "https://images.unsplash.com/photo-1759688983881-0742f416a4b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3aW5uZXIlMjBtZWRhbHxlbnwwfHx8fDE3Njc5MDI5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "winner medal"
+    },
+    {
+      "id": "badge-level-100",
+      "description": "Badge for reaching level 100.",
+      "imageUrl": "https://images.unsplash.com/photo-1667918135450-e8f2c1abd480?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdGFyJTIwYmFkZ2V8ZW58MHx8fHwxNzY3OTAyOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "star badge"
+    },
+    {
+      "id": "badge-top-gifter",
+      "description": "Badge for being a top gifter.",
+      "imageUrl": "https://images.unsplash.com/photo-1718465388901-9c628510c01e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnaWZ0JTIwYmFkZ2V8ZW58MHx8fHwxNzY3OTAyOTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gift badge"
+    },
+    {
+      "id": "gift-sweet-pop",
+      "imageUrl": "https://images.unsplash.com/photo-1552683494-b09162fefb57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb2xvcmZ1bCUyMGxvbGxpcG9wfGVufDB8fHx8MTc2ODkyNDYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful lollipop"
+    },
+    {
+      "id": "gift-i-cone",
+      "imageUrl": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpY2UlMjBjcmVhbXxlbnwwfHx8fDE3Njg4NjE2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ice cream"
+    },
+    {
+      "id": "gift-perfume",
+      "imageUrl": "https://images.unsplash.com/photo-1585218334450-afcf929da36e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2ODg1Mzc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "perfume bottle"
+    },
+    {
+      "id": "gift-rose",
+      "imageUrl": "https://images.unsplash.com/photo-1628162407496-3c902bce7a8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzaW5nbGUlMjByb3NlfGVufDB8fHx8MTc2ODkyNDYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "single rose"
+    },
+    {
+      "id": "gift-kiss",
+      "imageUrl": "https://images.unsplash.com/photo-1666594171486-858f82f5b191?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsaXBzdGljayUyMGtpc3N8ZW58MHx8fHwxNzY4OTI0NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lipstick kiss"
+    },
+    {
+      "id": "gift-crown",
+      "imageUrl": "https://images.unsplash.com/photo-1742189415527-9149c0c546c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkJTIwY3Jvd258ZW58MHx8fHwxNzY4ODI1ODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold crown"
+    },
+    {
+      "id": "gift-diamond-ring",
+      "imageUrl": "https://images.unsplash.com/photo-1607703829739-c05b7beddf60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaWFtb25kJTIwcmluZ3xlbnwwfHx8fDE3Njg4OTU1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diamond ring"
+    },
+    {
+      "id": "gift-luxury-car",
+      "imageUrl": "https://images.unsplash.com/photo-1696581082754-896e5d611bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx5ZWxsb3clMjBzcG9ydHMlMjBjYXJ8ZW58MHx8fHwxNzY4OTI0NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yellow sports car"
+    }
+  ]
+}

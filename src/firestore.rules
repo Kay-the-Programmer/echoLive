@@ -1,0 +1,130 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // By default, deny all reads and writes.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Helper functions for common security checks.
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return exists(/databases/$(database)/documents/appowners/$(userId));
+    }
+    
+    function isAdmin(userId) {
+      return exists(/databases/$(database)/documents/admins/$(userId));
+    }
+    
+    function hasTreasuryAccess(userId) {
+        return exists(/databases/$(database)/documents/treasury_access/$(userId));
+    }
+    
+    function isSelf(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Helper to check if a role-related field is being changed
+    function isChangingRole(request, resource) {
+        let incoming = request.resource.data;
+        let existing = resource.data;
+        return incoming.isAdmin != existing.isAdmin ||
+               incoming.isOwner != existing.isOwner ||
+               incoming.isAgent != existing.isAgent ||
+               incoming.hasTreasuryAccess != existing.hasTreasuryAccess;
+    }
+
+    // User profiles can be read by anyone.
+    // A user can update their own profile, but CANNOT change their own roles.
+    // The App Owner can change anything on a user profile, including roles, but cannot delete themselves.
+    // Admins can update profiles, but CANNOT change roles.
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isSelf(userId);
+      allow update: if (isSelf(userId) && !isChangingRole(request, resource)) ||
+                       (isAdmin(request.auth.uid) && !isChangingRole(request, resource)) ||
+                       isOwner(request.auth.uid);
+      allow delete: if isOwner(request.auth.uid) && request.auth.uid != userId;
+    }
+    
+    // Critical role collections.
+    match /appowners/{userId} {
+      allow create: if isAuthenticated() && !exists(/databases/$(database)/documents/appowners);
+      allow read: if isAuthenticated();
+      allow update, delete: if false;
+    }
+    
+    match /admins/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(request.auth.uid);
+    }
+    
+    match /treasury_access/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(request.auth.uid);
+    }
+    
+    // Public data definitions are readable by any authenticated user, but only writable by admins.
+    match /levels/{levelId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin(request.auth.uid);
+    }
+    
+    match /gifts/{giftId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin(request.auth.uid);
+    }
+    
+    match /guardians/{guardianId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin(request.auth.uid);
+    }
+
+    // Party rooms can be created and joined by any authenticated user for the prototype to function.
+    match /party_rooms/{partyRoomId} {
+      allow read, write: if isAuthenticated();
+    }
+    
+    // Global collections for admin-only access.
+    match /transactions/{transactionId} {
+      allow read, write: if isAdmin(request.auth.uid);
+    }
+    
+    match /violations/{violationId} {
+      allow read, write: if isAdmin(request.auth.uid);
+    }
+    
+    // Global balance can only be read by the Owner or those with Treasury access.
+    // It CANNOT be written to by any client. This must be done by a server function.
+    match /global_balances/{balanceId} {
+      allow read: if isOwner(request.auth.uid) || hasTreasuryAccess(request.auth.uid);
+      allow write: if false;
+    }
+
+    // User-specific sub-collections.
+    match /users/{userId}/transactions/{transactionId} {
+      allow read, write: if isSelf(userId) || isAdmin(request.auth.uid);
+    }
+    
+    match /users/{userId}/user_guardians/{userGuardianId} {
+      allow read, write: if isSelf(userId) || isAdmin(request.auth.uid);
+    }
+
+    // Withdrawal requests
+    match /withdrawals/{withdrawalId} {
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAdmin(request.auth.uid);
+    }
+
+    match /users/{userId}/withdrawals/{withdrawalId} {
+       allow create: if isSelf(userId);
+       allow read, update, delete: if isSelf(userId) || isAdmin(request.auth.uid);
+    }
+  }
+}
