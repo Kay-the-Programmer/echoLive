@@ -10,13 +10,13 @@ import {
   CarouselItem,
   CarouselDots,
 } from "@/components/ui/carousel"
-import { placeholderImages } from "@/lib/placeholder-images.json"
+import { placeholderImages } from "@/lib/data"
 
 export function EventCarousel() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true, direction: 'forward' })
   )
-  
+
   const pkEventImage = placeholderImages.find(p => p.id === 'pk-event');
 
   const events = [
@@ -29,12 +29,12 @@ export function EventCarousel() {
       reward: "2,400,000 rewards & an exclusive event medal!",
     },
     {
-        id: 2,
-        image: "https://picsum.photos/seed/event2/800/250",
-        hint: "concert stage",
-        title: "Summer Music Festival",
-        date: "This Weekend!",
-        reward: "Exclusive badges and gifts!",
+      id: 2,
+      image: "https://picsum.photos/seed/event2/800/250",
+      hint: "concert stage",
+      title: "Summer Music Festival",
+      date: "This Weekend!",
+      reward: "Exclusive badges and gifts!",
     }
   ];
 
@@ -52,20 +52,20 @@ export function EventCarousel() {
         {events.map((event) => (
           <CarouselItem key={event.id}>
             <div className="relative aspect-[16/5] w-full overflow-hidden rounded-lg">
-                {event.image && (
-                    <Image
-                        src={event.image}
-                        alt={event.title}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={event.hint}
-                    />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent p-4 flex flex-col justify-end">
-                    <h3 className="font-bold text-white text-lg md:text-xl drop-shadow-md">{event.title}</h3>
-                    <p className="text-white/80 text-xs md:text-sm drop-shadow-md">{event.date}</p>
-                    <p className="text-amber-300 text-xs md:text-sm font-semibold drop-shadow-md mt-1">{event.reward}</p>
-                </div>
+              {event.image && (
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover"
+                  data-ai-hint={event.hint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent p-4 flex flex-col justify-end">
+                <h3 className="font-bold text-white text-lg md:text-xl drop-shadow-md">{event.title}</h3>
+                <p className="text-white/80 text-xs md:text-sm drop-shadow-md">{event.date}</p>
+                <p className="text-amber-300 text-xs md:text-sm font-semibold drop-shadow-md mt-1">{event.reward}</p>
+              </div>
             </div>
           </CarouselItem>
         ))}

@@ -5,8 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { PageHeader } from "@/components/shared/page-header";
 import { StreamCard } from "@/components/stream-card";
-import { livePartyRooms, popularLiveStreams } from "@/lib/data";
-import { placeholderImages as placeholderImagesData } from "@/lib/placeholder-images.json";
+import { livePartyRooms, popularLiveStreams, placeholderImages as placeholderImagesData } from "@/lib/data";
 import {
   Dialog,
   DialogContent,
@@ -70,7 +69,7 @@ export default function ExplorePage() {
           </DialogHeader>
           <div className="py-4 text-center">
             {bonusImage && (
-               <Image
+              <Image
                 src={bonusImage.imageUrl}
                 alt="Registration Bonus"
                 width={200}
@@ -82,7 +81,7 @@ export default function ExplorePage() {
             <p className="mt-4 text-lg font-bold text-foreground flex items-center justify-center gap-2">
               You've been awarded
             </p>
-            <p className="font-headline text-4xl font-bold text-amber-400 flex items-center justify-center gap-2" style={{textShadow: "0 0 10px #fbbF2480"}}>
+            <p className="font-headline text-4xl font-bold text-amber-400 flex items-center justify-center gap-2" style={{ textShadow: "0 0 10px #fbbF2480" }}>
               <Coins className="h-8 w-8" /> 750 Coins
             </p>
           </div>

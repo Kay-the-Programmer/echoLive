@@ -1,0 +1,118 @@
+﻿
+> nextn@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+
+   Creating an optimized production build ...
+node.exe : Browserslist: caniuse-lite 
+is outdated. Please run:
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSp    
+ecified: (Browserslist: c...ed.     
+Please run::String) [], Remote    
+Exception
+    + FullyQualifiedErrorId : Nativ    
+eCommandError
+ 
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https
+://github.com/browserslist/update-db#re
+adme
+ ΓÜá Compiled with warnings
+
+./node_modules/require-in-the-middle/in
+dex.js
+Critical dependency: require function 
+is used in a way in which dependencies 
+cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-in-the-middle/in
+dex.js
+./node_modules/@opentelemetry/instrumen
+tation/build/esm/platform/node/instrume
+ntation.js
+./node_modules/@opentelemetry/instrumen
+tation/build/esm/platform/node/index.js
+./node_modules/@opentelemetry/instrumen
+tation/build/esm/platform/index.js
+./node_modules/@opentelemetry/instrumen
+tation/build/esm/index.js
+./node_modules/@opentelemetry/sdk-node/
+build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/
+build/src/index.js
+./node_modules/@genkit-ai/core/lib/trac
+ing/node-telemetry-provider.js
+./node_modules/@genkit-ai/core/lib/node
+.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/faq-agent.ts
+
+ Γ£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/50) ...
+   Generating static pages (12/50) 
+ Γ¿» useSearchParams() should be 
+wrapped in a suspense boundary at page 
+"/admin/users". Read more: https://next
+js.org/docs/messages/missing-suspense-w
+ith-csr-bailout
+    at s (C:\Users\kpyth\Workspace\echo
+live\.next\server\chunks\8999.js:3:2205
+81)
+    at c (C:\Users\kpyth\Workspace\echo
+live\.next\server\chunks\8999.js:3:2316
+03)
+    at b (C:\Users\kpyth\Workspace\echo
+live\.next\server\app\admin\users\page.
+js:1:4180)
+    at nj (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+46252)
+    at nM (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+47572)
+    at nL (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+64547)
+    at nI (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+47011)
+    at nM (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+47718)
+    at nM (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+61547)
+    at nL (C:\Users\kpyth\Workspace\ech
+olive\node_modules\next\dist\compiled\n
+ext-server\app-page.runtime.prod.js:12:
+64547)
+
+Error occurred prerendering page 
+"/admin/users". Read more: https://next
+js.org/docs/messages/prerender-error
+
+   Generating static pages (24/50) 
+   Generating static pages (37/50) 
+ Γ£ô Generating static pages (50/50)
+
+> Export encountered errors on 
+following paths:
+	/admin/users/page: /admin/users

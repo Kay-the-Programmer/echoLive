@@ -1,0 +1,135 @@
+﻿
+> nextn@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+
+   Creating an optimized production build ...
+node.exe : Browserslist: 
+caniuse-lite is outdated. Please 
+run:
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~
+    + CategoryInfo          : NotS 
+   pecified: (Browserslist: c...e  
+  d. Please run::String) [], Rem   
+ oteException
+    + FullyQualifiedErrorId : Nati 
+   veCommandError
+ 
+  npx update-browserslist-db@latest
+  Why you should do it regularly: h
+ttps://github.com/browserslist/upda
+te-db#readme
+ ΓÜá Compiled with warnings
+
+./node_modules/require-in-the-middl
+e/index.js
+Critical dependency: require 
+function is used in a way in which 
+dependencies cannot be statically 
+extracted
+
+Import trace for requested module:
+./node_modules/require-in-the-middl
+e/index.js
+./node_modules/@opentelemetry/instr
+umentation/build/esm/platform/node/
+instrumentation.js
+./node_modules/@opentelemetry/instr
+umentation/build/esm/platform/node/
+index.js
+./node_modules/@opentelemetry/instr
+umentation/build/esm/platform/index
+.js
+./node_modules/@opentelemetry/instr
+umentation/build/esm/index.js
+./node_modules/@opentelemetry/sdk-n
+ode/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-n
+ode/build/src/index.js
+./node_modules/@genkit-ai/core/lib/
+tracing/node-telemetry-provider.js
+./node_modules/@genkit-ai/core/lib/
+node.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/faq-agent.ts
+
+ Γ£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/49) ...
+   Generating static pages (12/49) 
+   Generating static pages (24/49) 
+   Generating static pages (36/49) 
+ Γ£ô Generating static pages (49/49)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+Γöî Γùï /                                    16.1 kB         135 kB
+Γö£ Γùï /_not-found                          880 B          88.4 kB
+Γö£ Γùï /admin                               6.64 kB         275 kB
+Γö£ Γùï /admin/agent-requests                5.63 kB         229 kB
+Γö£ Γùï /admin/coin-buyers                   4.88 kB         222 kB
+Γö£ Γùï /admin/guardians                     4.72 kB         228 kB
+Γö£ Γùï /admin/revenue                       6.14 kB         240 kB
+Γö£ Γùï /admin/rewards                       5.11 kB         219 kB
+Γö£ Γùï /admin/rules                         4.08 kB         229 kB
+Γö£ Γùï /admin/treasury                      6.35 kB         263 kB
+Γö£ Γùï /admin/users                         4.01 kB         278 kB
+Γö£ Γùï /admin/violators                     6.2 kB          273 kB
+Γö£ Γùï /admin/vips                          4.85 kB         228 kB
+Γö£ Γùï /admin/withdrawals                   7.86 kB         263 kB
+Γö£ Γùï /agent                               6.67 kB         221 kB
+Γö£ ╞Æ /api/admin/revenue-withdrawal        0 B                0 B
+Γö£ ╞Æ /api/admin/withdrawals               0 B                0 B
+Γö£ ╞Æ /api/gift/send                       0 B                0 B
+Γö£ ╞Æ /api/payments/lenco/checkout         0 B                0 B
+Γö£ ╞Æ /api/payments/lenco/webhook          0 B                0 B
+Γö£ Γùï /example                             3.3 kB          217 kB
+Γö£ Γùï /explore                             5.12 kB         137 kB
+Γö£ Γùï /handoff                             55.2 kB         159 kB
+Γö£ Γùï /help                                9.62 kB         252 kB
+Γö£ Γùï /leaderboards                        3.16 kB         102 kB
+Γö£ Γùï /levels                              6.55 kB         110 kB
+Γö£ Γùï /login                               1.86 kB         244 kB
+Γö£ Γùï /messages                            2.55 kB         101 kB
+Γö£ Γùï /missions                            4.8 kB          243 kB
+Γö£ Γùï /moments                             152 B          87.7 kB
+Γö£ Γùï /party                               12.4 kB         131 kB
+Γö£ ╞Æ /party/[id]                          11 kB           265 kB
+Γö£ Γùï /party/create                        7.46 kB         232 kB
+Γö£ Γùï /pk-battles                          304 B            93 kB
+Γö£ Γùï /profile                             14.3 kB         229 kB
+Γö£ Γùï /recover                             3 kB            106 kB
+Γö£ Γùï /screenshots                         7.09 kB         111 kB
+Γö£ Γùï /shop                                179 B          96.4 kB
+Γö£ Γùï /shop/coins                          7.07 kB         237 kB
+Γö£ Γùï /shop/guardian                       152 B          87.7 kB
+Γö£ Γùï /shop/vip                            152 B          87.7 kB
+Γö£ Γùï /signup                              2.22 kB         244 kB
+Γö£ Γùï /store                               304 B            93 kB
+Γö£ ╞Æ /user/[numericId]                    223 B          87.7 kB
+Γö£ Γùï /wallet                              7.58 kB         242 kB
+Γö£ Γùï /wallet/coins                        3.61 kB         224 kB
+Γö£ Γùï /wallet/method                       2.72 kB         252 kB
+Γö£ Γùï /wallet/points                       4.64 kB         219 kB
+Γöö Γùï /wallet/withdraw                     5.71 kB         235 kB
++ First Load JS shared by all            87.5 kB
+  Γö£ chunks/2117-941ca18a46904597.js      31.9 kB
+  Γö£ chunks/fd9d1056-36f772b4ade5155e.js  53.6 kB
+  Γöö other shared chunks (total)          1.97 kB
+
+
+Γùï  (Static)   prerendered as static content
+╞Æ  (Dynamic)  server-rendered on demand
+

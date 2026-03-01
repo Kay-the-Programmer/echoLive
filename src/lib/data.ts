@@ -1,5 +1,5 @@
 
-import {
+export type {
   User,
   Stream,
   CoinPackage,
@@ -14,8 +14,26 @@ import {
   Event,
   Violation,
 } from "./types";
-import { placeholderImages } from './placeholder-images.json';
+
+import type {
+  User,
+  Stream,
+  CoinPackage,
+  VIPLevel,
+  GuardianTier,
+  Transaction,
+  Mission,
+  Gift,
+  LeaderboardEntry,
+  Badge,
+  LevelInfo,
+  Event,
+  Violation,
+} from "./types";
+import placeholderImagesData from './placeholder-images.json';
 import { subDays, subHours } from 'date-fns';
+
+export const { placeholderImages } = placeholderImagesData;
 
 const findImage = (id: string) => placeholderImages.find(p => p.id === id)?.imageUrl || `https://picsum.photos/seed/${id}/300/400`;
 const now = new Date('2024-07-15T12:00:00.000Z');
@@ -167,33 +185,33 @@ export const livestreamLeaderboard: LeaderboardEntry[] = [
 ];
 
 export const userBadges: Badge[] = [
-    { id: 'b1', name: 'PK Champion', description: 'Won 10 PK battles in a row.', imageUrl: findImage('badge-pk-winner') },
-    { id: 'b2', name: 'Level 100', description: 'Reached Wealth Level 100.', imageUrl: findImage('badge-level-100') },
-    { id: 'b3', name: 'Top Gifter', description: 'Was #1 on the weekly gifting leaderboard.', imageUrl: findImage('badge-top-gifter') },
+  { id: 'b1', name: 'PK Champion', description: 'Won 10 PK battles in a row.', imageUrl: findImage('badge-pk-winner') },
+  { id: 'b2', name: 'Level 100', description: 'Reached Wealth Level 100.', imageUrl: findImage('badge-level-100') },
+  { id: 'b3', name: 'Top Gifter', description: 'Was #1 on the weekly gifting leaderboard.', imageUrl: findImage('badge-top-gifter') },
 ];
 
 export const levelSystemInfo: LevelInfo[] = [
-    { type: 'Livestream Level', description: 'Increase your Livestream Level by engaging in streaming activities.', factors: ['Points earned', 'Hours of livestreaming', 'Gifts received', 'PK wins', 'Crown seat usage'] },
-    { type: 'Wealth Level', description: 'Increase your Wealth Level by contributing to the community.', factors: ['Coins spent', 'Gifts sent', 'Purchasing VIP', 'Purchasing Guardian status'] }
+  { type: 'Livestream Level', description: 'Increase your Livestream Level by engaging in streaming activities.', factors: ['Points earned', 'Hours of livestreaming', 'Gifts received', 'PK wins', 'Crown seat usage'] },
+  { type: 'Wealth Level', description: 'Increase your Wealth Level by contributing to the community.', factors: ['Coins spent', 'Gifts sent', 'Purchasing VIP', 'Purchasing Guardian status'] }
 ];
 
 export const events: Event[] = [
-    { id: 'e1', title: 'Summer Synthwave Festival', description: 'A 3-day music festival featuring the best synthwave artists on the platform. Special event gifts and badges available.', date: '2024-08-15T18:00:00Z', imageUrl: findImage('stream-7') },
-    { id: 'e2', title: 'Cyberpunk 2077 Speedrun Challenge', description: 'Watch top streamers race to complete Cyberpunk 2077. Bet on your favorite and win coin prizes.', date: '2024-09-01T12:00:00Z', imageUrl: findImage('stream-1') },
-    { id: 'e3', title: 'Community Art Showcase', description: 'A week-long event celebrating the amazing artists of EchoLive. Vote for your favorite creations.', date: '2024-09-10T10:00:00Z', imageUrl: findImage('stream-3') },
+  { id: 'e1', title: 'Summer Synthwave Festival', description: 'A 3-day music festival featuring the best synthwave artists on the platform. Special event gifts and badges available.', date: '2024-08-15T18:00:00Z', imageUrl: findImage('stream-7') },
+  { id: 'e2', title: 'Cyberpunk 2077 Speedrun Challenge', description: 'Watch top streamers race to complete Cyberpunk 2077. Bet on your favorite and win coin prizes.', date: '2024-09-01T12:00:00Z', imageUrl: findImage('stream-1') },
+  { id: 'e3', title: 'Community Art Showcase', description: 'A week-long event celebrating the amazing artists of EchoLive. Vote for your favorite creations.', date: '2024-09-10T10:00:00Z', imageUrl: findImage('stream-3') },
 ];
 
 export const platformRules = [
-    { title: "No Pornography or Sexually Explicit Content", description: "Any content depicting pornography, sexual acts, or nudity is strictly forbidden. This includes avatars, backgrounds, and user-generated content." },
-    { title: "No Hate Speech or Harassment", description: "Hate speech, bullying, harassment, and any form of discrimination against individuals or groups based on race, ethnicity, religion, gender, sexual orientation, disability, or other protected characteristics will not be tolerated." },
-    { title: "No Illegal Activities", description: "Do not use the platform to conduct or promote illegal activities, including but not limited to drug trafficking, fraud, and terrorism." },
-    { title: "No Spam or Scams", description: "Spamming, phishing, and attempting to scam other users out of their coins, points, or personal information is strictly prohibited." },
-    { title: "Respect Intellectual Property", description: "Do not stream, post, or share content that infringes on the copyrights, trademarks, or other intellectual property rights of others." },
-    { title: "No Impersonation", description: "Do not impersonate other users, streamers, platform staff, or any other individual or entity." },
-    { title: "Maintain a Safe Environment", description: "Content that promotes self-harm, violence, or dangerous acts is not allowed. We strive to maintain a positive and safe community for everyone." },
-    { title: "No Underage Users", description: "You must be 18 years or older to use this platform. Do not stream or interact with minors in an inappropriate manner." },
-    { title: "Protect Private Information", description: "Do not share private information of other users without their explicit consent. This includes phone numbers, addresses, and other personal data." },
-    { title: "Do Not Exploit the System", description: "Abusing bugs, manipulating platform features, or using automated scripts to gain an unfair advantage is strictly forbidden." }
+  { title: "No Pornography or Sexually Explicit Content", description: "Any content depicting pornography, sexual acts, or nudity is strictly forbidden. This includes avatars, backgrounds, and user-generated content." },
+  { title: "No Hate Speech or Harassment", description: "Hate speech, bullying, harassment, and any form of discrimination against individuals or groups based on race, ethnicity, religion, gender, sexual orientation, disability, or other protected characteristics will not be tolerated." },
+  { title: "No Illegal Activities", description: "Do not use the platform to conduct or promote illegal activities, including but not limited to drug trafficking, fraud, and terrorism." },
+  { title: "No Spam or Scams", description: "Spamming, phishing, and attempting to scam other users out of their coins, points, or personal information is strictly prohibited." },
+  { title: "Respect Intellectual Property", description: "Do not stream, post, or share content that infringes on the copyrights, trademarks, or other intellectual property rights of others." },
+  { title: "No Impersonation", description: "Do not impersonate other users, streamers, platform staff, or any other individual or entity." },
+  { title: "Maintain a Safe Environment", description: "Content that promotes self-harm, violence, or dangerous acts is not allowed. We strive to maintain a positive and safe community for everyone." },
+  { title: "No Underage Users", description: "You must be 18 years or older to use this platform. Do not stream or interact with minors in an inappropriate manner." },
+  { title: "Protect Private Information", description: "Do not share private information of other users without their explicit consent. This includes phone numbers, addresses, and other personal data." },
+  { title: "Do Not Exploit the System", description: "Abusing bugs, manipulating platform features, or using automated scripts to gain an unfair advantage is strictly forbidden." }
 ];
 
 export const faqs = [

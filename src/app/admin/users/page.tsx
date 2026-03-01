@@ -35,7 +35,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 
-export default function UserListPage() {
+function UserListContent() {
   const searchParams = useSearchParams();
   const filter = searchParams.get('filter');
 
@@ -50,10 +50,11 @@ export default function UserListPage() {
   const isAdmin = !!adminRecord;
   const isOwner = useMemo(() => {
     if (ownersLoading || !appOwners || !authUser) return false;
-    return appOwners.some((owner) => owner.id === authUser.uid);
+    return appOwners.some((owner: any) => owner.id === authUser.uid);
   }, [appOwners, ownersLoading, authUser]);
 
   const { data: users, isLoading: usersLoading } = useAllUsers({ enabled: isAdmin });
+
 
   const [isUpdatingRole, setIsUpdatingRole] = useState<string | null>(null);
   const [isGrantPerksDialogOpen, setIsGrantPerksDialogOpen] = useState(false);
@@ -70,7 +71,7 @@ export default function UserListPage() {
       toast({ variant: 'destructive', title: 'Permission Denied', description: 'Firestore not available.' });
       return;
     }
-    
+
     setIsUpdatingRole(userId);
     const userToUpdate = users?.find((u) => u.id === userId);
     if (!userToUpdate) return;
@@ -121,18 +122,18 @@ export default function UserListPage() {
       setUserToDelete(null);
       return;
     }
-    
+
     setIsUpdatingRole(userToDelete.id);
-    
+
     try {
       const batch = writeBatch(firestore);
-      
+
       const userDocRef = doc(firestore, 'users', userToDelete.id);
       batch.delete(userDocRef);
-      
+
       const adminDocRef = doc(firestore, 'admins', userToDelete.id);
       batch.delete(adminDocRef);
-      
+
       const treasuryDocRef = doc(firestore, 'treasury_access', userToDelete.id);
       batch.delete(treasuryDocRef);
 
@@ -308,14 +309,14 @@ export default function UserListPage() {
                           </Button>
                           {isOwner && user.id !== authUser?.uid && (
                             <Button
-                                variant="destructive"
-                                size="sm"
-                                className="w-36"
-                                onClick={() => setUserToDelete(user)}
-                                disabled={isUpdatingRole === user.id}
+                              variant="destructive"
+                              size="sm"
+                              className="w-36"
+                              onClick={() => setUserToDelete(user)}
+                              disabled={isUpdatingRole === user.id}
                             >
-                                {isUpdatingRole === user.id ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Trash2 className="mr-2 h-4 w-4" />}
-                                Delete User
+                              {isUpdatingRole === user.id ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Trash2 className="mr-2 h-4 w-4" />}
+                              Delete User
                             </Button>
                           )}
                         </div>
@@ -334,26 +335,38 @@ export default function UserListPage() {
 
       <AlertDialog open={!!userToDelete} onOpenChange={(open) => !open && setUserToDelete(null)}>
         <AlertDialogContent>
-            <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                <AlertDialogDescription>
-                    This action cannot be undone. This will permanently delete the user's data from the application database. The user account in Firebase Authentication will not be disabled.
-                </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-                <AlertDialogCancel disabled={isUpdatingRole === userToDelete?.id}>Cancel</AlertDialogCancel>
-                <AlertDialogAction
-                    disabled={isUpdatingRole === userToDelete?.id}
-                    onClick={handleDeleteConfirm}
-                    className={buttonVariants({ variant: "destructive" })}
-                >
-                    {isUpdatingRole === userToDelete?.id && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                    Delete
-                </AlertDialogAction>
-            </AlertDialogFooter>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete the user's data from the application database. The user account in Firebase Authentication will not be disabled.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={isUpdatingRole === userToDelete?.id}>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              disabled={isUpdatingRole === userToDelete?.id}
+              onClick={handleDeleteConfirm}
+              className={buttonVariants({ variant: "destructive" })}
+            >
+              {isUpdatingRole === userToDelete?.id && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
 
     </div>
+  );
+}
+
+export default function UserListPage() {
+  return (
+    <React.Suspense fallback={
+      <div className="flex justify-center items-center h-screen">
+        <Loader2 className="h-12 w-12 animate-spin text-primary" />
+      </div>
+    }>
+      <UserListContent />
+    </React.Suspense>
   );
 }
