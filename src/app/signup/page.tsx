@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -8,7 +7,7 @@ import { z } from 'zod';
 import { createUserWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, getDoc, setDoc, collection, getDocs, writeBatch } from 'firebase/firestore';
 import { useAuth, useFirestore } from '@/firebase';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
@@ -45,18 +44,21 @@ type FormValues = z.infer<typeof formSchema>;
 export default function SignupPage() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const invitationRef = searchParams.get('ref');
+
   const { toast } = useToast();
   const auth = useAuth();
   const firestore = useFirestore();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: '', email: '', password: ''},
+    defaultValues: { name: '', email: '', password: '' },
   });
 
   async function onSubmit(values: FormValues) {
     setIsLoading(true);
-    
+
     const avatarDataUrl = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
     try {
@@ -65,7 +67,7 @@ export default function SignupPage() {
         values.email,
         values.password
       );
-      
+
       const user = userCredential.user;
       const processedName = values.name.replace(/\s+/g, '');
 
@@ -73,9 +75,9 @@ export default function SignupPage() {
         displayName: processedName,
         photoURL: avatarDataUrl,
       });
-      
+
       const numericId = Math.floor(10000000 + Math.random() * 90000000).toString();
-      
+
       const ownersCollectionRef = collection(firestore, 'appowners');
       const ownersSnapshot = await getDocs(ownersCollectionRef);
       const isFirstUser = ownersSnapshot.empty;
@@ -86,13 +88,13 @@ export default function SignupPage() {
         name: processedName,
         email: values.email,
         avatarUrl: avatarDataUrl,
-        countryCode: 'US', // Default country code
+        countryCode: 'ZM', // Default to Zambia for this integration
         level: 1,
         wealthLevel: 1,
         totalCoinsSpent: 0,
-        totalPointsEarned: 0,
-        coinBalance: 750, // Welcome bonus
-        pointBalance: 0,
+        totalPointsEarned: 1000,
+        coinBalance: 0,
+        pointBalance: 1000, // Registration bonus
         isAdmin: isFirstUser,
         isOwner: isFirstUser,
         isAgent: false,
@@ -101,28 +103,32 @@ export default function SignupPage() {
         followingCount: 0,
         followerCount: 0,
         friendCount: 0,
+        invitedBy: invitationRef || undefined,
       };
 
       const batch = writeBatch(firestore);
       const userDocRef = doc(firestore, "users", user.uid);
       batch.set(userDocRef, userProfile);
 
+      // ... (existing batch logic for owners/admins)
+
       if (isFirstUser) {
-          const ownerDocRef = doc(firestore, 'appowners', user.uid);
-          batch.set(ownerDocRef, { assignedAt: new Date().toISOString() });
-          
-          const adminDocRef = doc(firestore, 'admins', user.uid);
-          batch.set(adminDocRef, { grantedAt: new Date().toISOString() });
+        const ownerDocRef = doc(firestore, 'appowners', user.uid);
+        batch.set(ownerDocRef, { assignedAt: new Date().toISOString() });
+
+        const adminDocRef = doc(firestore, 'admins', user.uid);
+        batch.set(adminDocRef, { grantedAt: new Date().toISOString() });
       }
 
       await batch.commit();
 
       toast({
         title: "Account Created Successfully!",
-        description: "Welcome to EchoLive.",
+        description: "Welcome to EchoLive. 1,000 points added!",
       });
       router.push('/profile');
     } catch (error: any) {
+      // ... (error toast)
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
@@ -148,20 +154,20 @@ export default function SignupPage() {
         const ownersCollectionRef = collection(firestore, 'appowners');
         const ownersSnapshot = await getDocs(ownersCollectionRef);
         const isFirstUser = ownersSnapshot.empty;
-        
+
         const userProfile: User = {
           id: user.uid,
           numericId: numericId,
           name: user.displayName || 'New User',
-          email: user.email,
+          email: user.email || '',
           avatarUrl: user.photoURL || `https://picsum.photos/seed/${user.uid}/128`,
-          countryCode: 'US',
+          countryCode: 'ZM',
           level: 1,
           wealthLevel: 1,
           totalCoinsSpent: 0,
-          totalPointsEarned: 0,
-          coinBalance: 750,
-          pointBalance: 0,
+          totalPointsEarned: 1000,
+          coinBalance: 0,
+          pointBalance: 1000,
           isAdmin: isFirstUser,
           isOwner: isFirstUser,
           isAgent: false,
@@ -170,26 +176,28 @@ export default function SignupPage() {
           followingCount: 0,
           followerCount: 0,
           friendCount: 0,
+          invitedBy: invitationRef || undefined,
         };
-  
+
         const batch = writeBatch(firestore);
         batch.set(userDocRef, userProfile);
-  
+
         if (isFirstUser) {
-            const ownerDocRef = doc(firestore, 'appowners', user.uid);
-            batch.set(ownerDocRef, { assignedAt: new Date().toISOString() });
-            const adminDocRef = doc(firestore, 'admins', user.uid);
-            batch.set(adminDocRef, { grantedAt: new Date().toISOString() });
+          const ownerDocRef = doc(firestore, 'appowners', user.uid);
+          batch.set(ownerDocRef, { assignedAt: new Date().toISOString() });
+          const adminDocRef = doc(firestore, 'admins', user.uid);
+          batch.set(adminDocRef, { grantedAt: new Date().toISOString() });
         }
-  
+
         await batch.commit();
-        toast({ title: "Account Created Successfully!", description: "Welcome to EchoLive." });
+        toast({ title: "Account Created Successfully!", description: "Welcome to EchoLive. 1,000 pts added!" });
       } else {
         toast({ title: "Logged In Successfully!", description: "Welcome back to EchoLive." });
       }
-      
+
       router.push('/profile');
     } catch (error: any) {
+      // ... (error toast)
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
@@ -275,10 +283,10 @@ export default function SignupPage() {
               Sign Up with Google
             </Button>
             <div className="mt-4 text-center text-sm">
-                Already have an account?{" "}
-                <Link href="/login" className="underline text-primary">
-                    Login
-                </Link>
+              Already have an account?{" "}
+              <Link href="/login" className="underline text-primary">
+                Login
+              </Link>
             </div>
           </CardContent>
         </Card>

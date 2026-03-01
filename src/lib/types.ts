@@ -47,6 +47,9 @@ export type User = {
   commissionPoints?: number;
   transferPoints?: number;
   platformRewardPoints?: number;
+  completedMissions?: string[];
+  lastMissionsReset?: string;
+  invitedBy?: string;
 };
 
 export type PartyRoom = {
@@ -128,7 +131,7 @@ export type Mission = {
   id: string;
   title: string;
   description: string;
-  reward: string;
+  reward: number | string;
   completed: boolean;
   gender?: 'male' | 'female';
   tier?: 'Silver VIP' | 'Golden VIP' | 'Diamond VIP' | 'Premium VIP' | 'Guardian of Silver' | 'Guardian of Gold' | 'Guardian of Diamond' | 'Guardian of Masters';
@@ -158,9 +161,9 @@ export type Badge = {
 }
 
 export type LevelInfo = {
-    type: 'Livestream Level' | 'Wealth Level';
-    description: string;
-    factors: string[];
+  type: 'Livestream Level' | 'Wealth Level';
+  description: string;
+  factors: string[];
 }
 
 export type Event = {
@@ -172,9 +175,9 @@ export type Event = {
 };
 
 export type GlobalBalance = {
-    id: 'singleton';
-    totalUsdRevenue: number;
-    updatedAt?: string;
+  id: 'singleton';
+  totalUsdRevenue: number;
+  updatedAt?: string;
 }
 
 export type Admin = {
